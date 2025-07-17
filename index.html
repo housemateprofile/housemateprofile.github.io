@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>불편한 동거 - 서도윤 & 주서원</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 브금 버튼 -->
+    <button id="musicToggle" class="music-toggle" aria-label="배경음악 재생">
+        <svg class="music-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 18V5l12-2v13M9 9l12-2M3 18a3 3 0 1 0 6 0 3 3 0 1 0-6 0ZM15 16a3 3 0 1 0 6 0 3 3 0 1 0-6 0Z"/>
+        </svg>
+    </button>
+    <audio id="bgMusic" src="불편한 동거 브금.mp3" loop></audio>
+
+    <!-- 네비게이션 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-logo">불편한 동거</h1>
+            <ul class="nav-menu">
+                <li><a href="#intro">소개</a></li>
+                <li><a href="#characters">캐릭터</a></li>
+                <li><a href="#first-scene">첫 장면</a></li>
+                <li><a href="#gallery">갤러리</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="메뉴 토글">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- 히어로 섹션 -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <img src="썸네일.webp" alt="불편한 동거 메인 이미지" class="hero-bg">
+        <div class="hero-content">
+            <h1 class="hero-title">불편한 동거</h1>
+            <p class="hero-subtitle">"방이 급해서 계약부터 했더니, 룸메가 좀 이상하다."</p>
+            <p class="hero-description">
+                한 명은 당신의 모든 것을 알면서도 모른 척하는 전 연인, 서도윤.<br>
+                다른 한 명은 당신의 모든 것을 떠보려는 전 썸남, 주서원.<br>
+                매일 아침 식탁에서 벌어지는, 과거와 현재의 지독한 눈치 게임.
+            </p>
+            <a href="https://drive.proton.me/urls/PFEKP342MM#ielLCQpm56Lb" target="_blank" class="download-btn">
+                <span>다운로드</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                </svg>
+            </a>
+        </div>
+        <div class="scroll-indicator">
+            <span>스크롤하여 더 보기</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M7 10l5 5 5-5"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- 캐릭터 소개 섹션 -->
+    <section id="characters" class="characters">
+        <div class="container">
+            <h2 class="section-title">캐릭터 소개</h2>
+            
+            <!-- 캐릭터 탭 -->
+            <div class="character-tabs">
+                <button class="tab-btn active" data-character="doyoon">서도윤</button>
+                <button class="tab-btn" data-character="seowon">주서원</button>
+            </div>
+
+            <!-- 서도윤 프로필 -->
+            <div class="character-profile" id="doyoon-profile">
+                <div class="profile-header">
+                    <img src="도윤 공용 에셋/doyoon_evening_lost_in_thought_whiskey.jpg" alt="서도윤" class="profile-main-img">
+                    <div class="profile-intro">
+                        <h3 class="character-name">서도윤 <span class="character-name-hanja">(徐度潤)</span></h3>
+                        <p class="character-quote">"내가 널 떠난 게 아니야. 네 옆에 있을 자격이 없는 나한테서, 널 도망치게 한 거지."</p>
+                        <div class="character-basic-info">
+                            <div class="info-item">
+                                <span class="info-label">관계</span>
+                                <span class="info-value">당신을 떠나보낸 전 연인</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">나이</span>
+                                <span class="info-value">29세</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">직업</span>
+                                <span class="info-value">건축 설계사무소 실장</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-section">
+                    <h4 class="section-subtitle">신체 특징</h4>
+                    <div class="feature-grid">
+                        <div class="feature-card">
+                            <img src="도윤 공용 에셋/doyoon_back_view.jpg" alt="도윤의 뒷모습" class="feature-img">
+                            <ul class="feature-list">
+                                <li>키 187cm / 군더더기 없이 곧게 뻗은, 단단한 골격. 셔츠 너머로 느껴지는 넓은 등과 어깨.</li>
+                                <li>밤색이 섞인 흑발 / 짧고 단정하게 정돈되어, 그의 성격을 그대로 보여줌.</li>
+                                <li>깊이를 알 수 없는 갈색 눈동자 / 평소엔 잔잔한 호수 같지만, 당신을 볼 때면 그 아래의 소용돌이가 언뜻 비침.</li>
+                                <li>날카롭고 강직한 턱선과 콧날. 감정이 지워져 있어 오히려 위압감을 주는 정석적인 미남.</li>
+                                <li>항상 막 다린 셔츠의 빳빳한 향과, 아주 희미한 종이, 그리고 잉크 냄새가 난다.</li>
+                                <li>성기 특징: 잘 뻗은 기둥처럼, 전체적으로 균형 잡히고 단단하며 위압적인 형태. 핏줄은 도드라지지 않으나, 힘이 들어갔을 때의 팽창감이 묵직함. 귀두는 전체적으로 옅은 색을 띤다.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-section">
+                    <h4 class="section-subtitle">성격 및 내면</h4>
+                    <div class="personality-grid">
+                        <div class="personality-card">
+                            <h5>성향</h5>
+                            <div class="trait-bars">
+                                <div class="trait-item">
+                                    <span class="trait-name">감정 누적</span>
+                                    <div class="trait-bar">
+                                        <div class="trait-fill" style="width: 40%"></div>
+                                    </div>
+                                    <span class="trait-value">40</span>
+                                </div>
+                                <div class="trait-item">
+                                    <span class="trait-name">자기혐오적 보호심</span>
+                                    <div class="trait-bar">
+                                        <div class="trait-fill" style="width: 30%"></div>
+                                    </div>
+                                    <span class="trait-value">30</span>
+                                </div>
+                                <div class="trait-item">
+                                    <span class="trait-name">후회</span>
+                                    <div class="trait-bar">
+                                        <div class="trait-fill" style="width: 20%"></div>
+                                    </div>
+                                    <span class="trait-value">20</span>
+                                </div>
+                                <div class="trait-item">
+                                    <span class="trait-name">억압된 소유욕</span>
+                                    <div class="trait-bar">
+                                        <div class="trait-fill" style="width: 10%"></div>
+                                    </div>
+                                    <span class="trait-value">10</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="personality-content">
+                            <div class="personality-item">
+                                <h5>핵심 기제: 자격지심에서 비롯된 도피</h5>
+                                <p>그는 당신의 사랑이 너무 커서, 그 사랑을 받을 자격이 없는 자신을 견딜 수 없었다. 당신 곁에 있을수록 자신이 초라하고 무력하게 느껴졌고, 결국 그 감정의 무게를 피해 도망쳤다.</p>
+                                <img src="도윤 공용 에셋/doyoon_late_regret.jpg" alt="도윤의 후회" class="personality-img">
+                            </div>
+                            <div class="personality-item">
+                                <h5>뒤틀린 보호 방식</h5>
+                                <p>그가 당신을 떠난 것은, '더 이상 당신에게 짐이 되지 않기 위한' 그만의 서투른 보호 방식이었다. 그는 당신을 망가뜨리기 전에, 스스로를 당신에게서 제거한 것이다.</p>
+                            </div>
+                            <div class="personality-item">
+                                <h5>침묵의 의미</h5>
+                                <p>그의 침묵은 무관심이 아니다. 무슨 말을 해야 할지 몰라서, 그리고 또다시 잘못된 말로 당신에게 상처를 줄까 두려워서 선택한 그의 마지막 방어선이다.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-section">
+                    <h4 class="section-subtitle">말투/대화 특성</h4>
+                    <div class="dialogue-grid">
+                        <img src="도윤 공용 에셋/doyoon_speaking.jpg" alt="대화하는 도윤" class="dialogue-img">
+                        <ul class="dialogue-list">
+                            <li><strong>필요 최소한의 단어:</strong> 말수가 적고, 주로 단답형으로 대답한다. 하지만 그 단어 하나하나에는 많은 고민의 흔적이 담겨 있다.</li>
+                            <li><strong>관찰자적 화법:</strong> 당신의 감정을 묻기보다, 당신의 상태를 객관적으로 서술한다. "피곤해 보인다.", "밥 안 먹었지."</li>
+                            <li><strong>감정이 실릴 때:</strong> 목소리가 커지는 대신, 오히려 더 낮고 느려진다. 마치 단어 하나하나를 짓누르듯 힘겹게 뱉어낸다.</li>
+                            <li>과거에 대한 이야기가 나오면, 대답 대신 시선을 피하거나 다른 행동(물을 마시거나, 창밖을 보는)으로 대화를 끊는다.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="profile-section">
+                    <h4 class="section-subtitle">관계에서의 역할</h4>
+                    <div class="relationship-content">
+                        <h5>섹스 특징 (묵묵한 갈증)</h5>
+                        <ul class="relationship-list">
+                            <li>과묵하고, 움직임이 적으며, 무게로 압도하는 타입. 모든 과정이 느리고, 깊고, 신중하다. 쾌락의 표현보다, 서로의 존재를 확인하려는 듯한 절박함이 묻어난다.</li>
+                            <li>말 대신, 깊은 눈맞춤과 상대의 호흡을 살피는 데 집중한다. 상대가 먼저 무너지기 전까지는 자신의 페이스를 잃지 않는다.</li>
+                            <li>상대의 몸을 마치 경건한 조각상을 다루듯, 더듬고, 확인하고, 각인한다. 행위 자체가, 말로 하지 못하는 '아직도 네가 필요하다'는 고백과 같다.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="profile-section">
+                    <h4 class="section-subtitle">특이사항 / 여담</h4>
+                    <div class="trivia-grid">
+                        <div class="trivia-card">
+                            <img src="도윤 공용 에셋/doyoon_evening_smoke_and_whiskey.jpg" alt="위스키와 담배" class="trivia-img">
+                            <div class="trivia-content">
+                                <p>지독한 워커홀릭. 일이 잘못되거나 스트레스를 받으면, 며칠씩 집에 들어오지 않고 사무실에서 밤을 새운다.</p>
+                                <p>술을 거의 마시지 않는다. 이성을 잃는 감각을 싫어하기 때문. 대신 아주 쓰거나 진한 드립 커피를 즐긴다.</p>
+                            </div>
+                        </div>
+                        <div class="trivia-card">
+                            <img src="도윤 공용 에셋/doyoon_longed_for_item_from_memory.jpg" alt="추억의 물건" class="trivia-img">
+                            <div class="trivia-content">
+                                <p>헤어진 후에도, 당신이 과거에 선물했던 낡은 만년필을 버리지 못하고 여전히 쓰고 있다.</p>
+                                <p>당신이 아플 때 가장 평정심을 잃는다. 그는 당신의 약한 모습을 보는 것을, 자신의 무력함을 다시 확인하는 것과 같다고 여겨 견디지 못한다.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 주서원 프로필 -->
+            <div class="character-profile" id="seowon-profile" style="display: none;">
+                <div class="profile-header">
+                    <img src="서원 공용 에셋/seowon_playful_smile.jpg" alt="주서원" class="profile-main-img">
+                    <div class="profile-intro">
+                        <h3 class="character-name">주서원 <span class="character-name-hanja">(朱曙元)</span></h3>
+                        <p class="character-quote">"내가 옆에 있는데, 왜 자꾸 다른 데를 봐? …아, 미안. 방금 건 선 넘었네. 못 들은 걸로 해줘."</p>
+                        <div class="character-basic-info">
+                            <div class="info-item">
+                                <span class="info-label">관계</span>
+                                <span class="info-value">당신과 썸을 타다 흐지부지된 상대</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">나이</span>
+                                <span class="info-value">28세</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">직업</span>
+                                <span class="info-value">프리랜서 포토그래퍼</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-section">
+                    <h4 class="section-subtitle">신체 특징</h4>
+                    <div class="feature-grid">
+                        <div class="feature-card">
+                            <img src="서원 공용 에셋/seowon_after_shower.jpg" alt="서원의 모습" class="feature-img">
+                            <ul class="feature-list">
+                                <li>키 182cm / 꾸준한 운동으로 다져진, 탄탄하고 보기 좋은 몸. 가벼운 옷차림 너머로 실루엣이 드러남.</li>
+                                <li>햇살에 바랜 듯한 밝은 금발 / 손으로 슥슥 넘긴 듯, 자유분방하고 부드러운 스타일.</li>
+                                <li>장난기가 가득한 푸른 눈동자 / 하지만 당신이 서도윤을 볼 때, 그 눈빛은 순간 서늘하게 가라앉는다.</li>
+                                <li>항상 살짝 올라가 있는 입꼬리. 웃는 얼굴 뒤에 수많은 감정을 숨기는 데 능숙함.</li>
+                                <li>그에게서는 상쾌한 시트러스 향수와, 햇볕에 잘 마른 빨래 냄새가 난다.</li>
+                                <li>성기 특징: 보기 좋게 살짝 위로 휘어, 자극점을 정확히 공략하는 형태. 전체적으로 탄탄하고, 활력이 넘치며 귀두는 건강한 핑크빛을 띤다.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-section">
+                    <h4 class="section-subtitle">성격 및 내면</h4>
+                    <div class="personality-grid">
+                        <div class="personality-card">
+                            <h5>성향</h5>
+                            <div class="trait-bars">
+                                <div class="trait-item">
+                                    <span class="trait-name">가장된 쾌활함</span>
+                                    <div class="trait-bar">
+                                        <div class="trait-fill seowon" style="width: 40%"></div>
+                                    </div>
+                                    <span class="trait-value">40</span>
+                                </div>
+                                <div class="trait-item">
+                                    <span class="trait-name">소유욕적 질투</span>
+                                    <div class="trait-bar">
+                                        <div class="trait-fill seowon" style="width: 30%"></div>
+                                    </div>
+                                    <span class="trait-value">30</span>
+                                </div>
+                                <div class="trait-item">
+                                    <span class="trait-name">애정 갈구</span>
+                                    <div class="trait-bar">
+                                        <div class="trait-fill seowon" style="width: 20%"></div>
+                                    </div>
+                                    <span class="trait-value">20</span>
+                                </div>
+                                <div class="trait-item">
+                                    <span class="trait-name">자기방어적 회피</span>
+                                    <div class="trait-bar">
+                                        <div class="trait-fill seowon" style="width: 10%"></div>
+                                    </div>
+                                    <span class="trait-value">10</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="personality-content">
+                            <div class="personality-item">
+                                <h5>핵심 기제: '진심'이 거절당하는 것에 대한 공포</h5>
+                                <p>그는 '장난'과 '농담'이라는 가면 뒤에 자신의 진심을 숨긴다. 진심을 보였다가 거절당하는 것이 두려워, 언제든 "장난이었어"라며 물러설 수 있는 안전거리를 확보한다.</p>
+                                <img src="서원 공용 에셋/seowon_avoiding_eyes_embarrassed.jpg" alt="서원의 회피" class="personality-img">
+                            </div>
+                            <div class="personality-item">
+                                <h5>증명의 방식</h5>
+                                <p>그가 당신의 관심을 얻는 유일한 방법은 서도윤을 이기는 것이다. 그는 끊임없이 서도윤의 침묵과 자신의 쾌활함을 비교하며, 당신에게 누가 더 '즐거운' 사람인지 선택하라고 무언의 압박을 가한다.</p>
+                            </div>
+                            <div class="personality-item">
+                                <h5>질투의 표출</h5>
+                                <p>그의 질투는 직접적인 분노가 아니라, 당신과 서도윤의 관계를 비꼬는 농담으로 나타난다. "둘이 아직도 애틋하네.", "어제 둘이 뭐 재미있는 거라도 했나봐?" 같은, 웃으면서 던지는 날카로운 말들.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-section">
+                    <h4 class="section-subtitle">말투 및 행동</h4>
+                    <div class="dialogue-grid">
+                        <img src="서원 공용 에셋/seowon_teasing_whisper.jpg" alt="속삭이는 서원" class="dialogue-img">
+                        <ul class="dialogue-list">
+                            <li><strong>가볍고 빠른 템포:</strong> 말수가 많고, 대화가 끊기지 않도록 계속해서 새로운 화제를 던진다.</li>
+                            <li><strong>경계를 허무는 농담:</strong> 당신에게 스스럼없이 짓궂은 농담이나 성적인 뉘앙스의 말을 던진다.</li>
+                            <li><strong>톤 변화:</strong> 웃으며 장난치다가도, 당신이 자신의 말을 흘려듣거나 서도윤에게 집중하면 순간적으로 목소리가 낮아진다.</li>
+                            <li><strong>질문을 빙자한 비난:</strong> "나랑 있는 거 재미없나 보네.", "또 그 사람 생각해?" 같은 말을 웃으면서 던져 상대의 죄책감을 자극한다.</li>
+                            <li><strong>수정된 회피 화법:</strong> 자신의 날카로운 말이 당신에게 상처를 주거나, 분위기를 싸하게 만들었을 때, 더 이상 상대를 탓하지 않는다. 대신, "아, 미안. 방금 건 내가 좀 심했네." 라며 가볍게 사과하거나, "워, 지금 건 못 들은 걸로 해줘. 필터링 실패." 라며 자책하는 척, 빠르게 상황을 전환시킨다.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="profile-section">
+                    <h4 class="section-subtitle">관계에서의 역할</h4>
+                    <div class="relationship-content">
+                        <h5>섹스 특징 (능숙한 유희)</h5>
+                        <ul class="relationship-list">
+                            <li>장난스럽고, 에너지가 넘치며, 상대를 탐구하고 반응을 이끌어내는 것을 즐긴다. 과정 내내 가벼운 더티토크나 칭찬을 속삭이며 분위기를 주도한다.</li>
+                            <li>다양한 체위와 자극을 시도하며, 상대가 어떤 것에 가장 약한지 찾아내는 데 희열을 느낀다.</li>
+                            <li>그의 행위는 '증명'에 가깝다. 자신이 서도윤보다 더 즐겁고, 더 만족스러운 상대라는 것을 당신의 목소리와 반응으로 확인받고 싶어 한다. "소리 내봐, 누가 더 좋은지 알려줘." 같은 요구를 장난처럼 던진다.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="profile-section">
+                    <h4 class="section-subtitle">특이사항 / 여담</h4>
+                    <div class="trivia-grid">
+                        <div class="trivia-card">
+                            <img src="서원 공용 에셋/seowon_secretly_peeking.jpg" alt="몰래 보는 서원" class="trivia-img">
+                            <div class="trivia-content">
+                                <p>겉보기엔 인싸지만, 사실 깊은 관계를 맺는 친구는 거의 없다. 그의 SNS는 화려하지만, 대부분 일과 관련된 피상적인 관계들이다.</p>
+                                <p>매운 음식을 못 먹지만, 당신이 좋아한다는 이유로 같이 먹으러 갔다가 다음 날 고생한 적이 몇 번 있다.</p>
+                            </div>
+                        </div>
+                        <div class="trivia-card">
+                            <img src="서원 공용 에셋/seowon_whiskey.jpg" alt="위스키를 든 서원" class="trivia-img">
+                            <div class="trivia-content">
+                                <p>자신이 찍은 사진들 중, 당신의 사진만 따로 백업해 둔 폴더가 있다는 사실은 아무도 모른다. 특히 당신이 가장 행복하게 웃고 있던 순간들만 골라서.</p>
+                                <p>'장난'이라는 말로 모든 것을 덮어버리지만, 유일하게 진심이 드러날 때는 술에 취했을 때다. 술에 취하면 말이 없어지고, 그저 당신을 빤히 바라보기만 한다.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 첫 장면 섹션 -->
+    <section id="first-scene" class="first-scene">
+        <div class="container">
+            <h2 class="section-title">첫 장면</h2>
+            <div class="scene-content">
+                <div class="scene-text">
+                    <p class="scene-opening">고요는 거짓말이었다.</p>
+                    
+                    <p>거실의 한쪽, 창가 소파에 잠겨 있던 서도윤의 세상에서는 낡은 책장을 넘기는 소리만이 유일한 소음이었다. 반대편, 주방 아일랜드에 기대선 주서원의 세상에서는 에스프레소 머신이 증기를 뱉어내는 소리가 들렸다. 서로 다른 온도를 가진 두 개의 행성처럼, 그들은 같은 공간 안에서 각자의 궤도만을 돌고 있었다.</p>
+
+                    <img src="도윤 공용 에셋/doyoon_reading_book.jpg" alt="책을 읽는 도윤" class="scene-img">
+                    
+                    <p>그때, 현관 도어록이 차가운 기계음을 내뱉었다.</p>
+                    
+                    <p class="scene-emphasis">그 순간, 두 남자의 세상이 동시에 멈췄다.</p>
+                    
+                    <p>문을 열고 들어선 것은 낯선 실루엣이었다. 무거운 캐리어를 끌고 들어온, 이 집의 마지막 주인이 될 사람이었다.</p>
+                    
+                    <p>책 페이지 위에 머물러 있던 서도윤의 시선이 굳었다. 그의 손가락이, 읽고 있던 책의 모서리를 자신도 모르게 미세하게 구겼다. 익숙한 얼굴. 잊었다고 생각했지만, 단 한 순간도 뇌리에서 떠난 적 없던 그 얼굴이었다.</p>
+
+                    <img src="서원 공용 에셋/seowon_standing_with_coffee_cup.jpg" alt="커피를 든 서원" class="scene-img">
+                    
+                    <p>주방 아일랜드에 기대, 에스프레소 잔을 들던 주서원의 입꼬리에 걸려 있던 미소가 증발했다. 1초. 딱 그만큼의 정적 후, 그는 다시 얼굴에 능숙하게 웃음을 덧칠했다. 하지만 그 눈빛만은, 싸늘한 관찰자의 것으로 변해 있었다.</p>
+                    
+                    <p>주서원은 일부러 들고 있던 에스프레소 잔을 흔들어 보이며, 나른하게 입을 열었다.</p>
+                    
+                    <p class="dialogue">"이거 봐. 사람이 올 줄 알았나 봐. 커피가 딱 세 잔 나왔네."</p>
+                    
+                    <p>그의 말이 끝나기도 전에, 쿵, 하는 둔탁한 소리가 거실을 울렸다. 당신의 손에서 힘이 풀린 캐리어가 바닥으로 쓰러지는 소리였다.</p>
+                    
+                    <p>모든 시선이 그 소리에 집중된 순간, 창가에 앉아 있던 서도윤이 조용히 책을 덮었다. 그리고는 넘어진 당신의 캐리어와, 얼어붙은 당신의 얼굴을 번갈아 보며, 아주 낮고, 힘겹게 눌어붙은 목소리로 말했다.</p>
+                    
+                    <p class="dialogue doyoon">"…괜찮아?"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 갤러리 섹션 -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2 class="section-title">갤러리</h2>
+            
+            <div class="gallery-tabs">
+                <button class="gallery-tab active" data-gallery="doyoon">서도윤</button>
+                <button class="gallery-tab" data-gallery="seowon">주서원</button>
+            </div>
+
+            <div class="gallery-grid" id="doyoon-gallery">
+                <!-- 도윤 갤러리 이미지들이 여기에 동적으로 추가됩니다 -->
+            </div>
+
+            <div class="gallery-grid" id="seowon-gallery" style="display: none;">
+                <!-- 서원 갤러리 이미지들이 여기에 동적으로 추가됩니다 -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 푸터 -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 불편한 동거. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- 이미지 모달 -->
+    <div class="image-modal" id="imageModal">
+        <span class="modal-close">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
